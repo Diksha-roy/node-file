@@ -65,7 +65,7 @@ Letus create a js file named **main.js**having the following code.
 
 Now run the main.js to see the result:
 
-> \$ node main.js
+> \$ ``` node main.js ```
 
 Verify the Output
 
