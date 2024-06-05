@@ -2,9 +2,9 @@
 
 ## **Table of Content**
 
-1. ** what is node js**
-2. ** why do you use node js **
-3. ** install node js** 
+1. **what is node js**
+2. **why do you use node js**
+3. **install node js** 
 4. **Synchronous** **vs** **Asynchronous** 
 5. **Open** **a** **File**
 6. **Syntax**
