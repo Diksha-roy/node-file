@@ -1,35 +1,30 @@
-NODE.JS - FILE 
+# NodeJs
 
-**Table of Content**
+## **Table of Content**
 
-**Synchronous** **vs** **Asynchronous**
-**Example**
-**Open** **a** **File**
-**Syntax**
-**Parameters**
-**Get** **File** **information**
-**path**
-**flags**
-**mode**
-**callback**
-**Writing** **File**
-**Reading** **File**
-**Delete** **File**
-**Closing** **File**
-**Truncate** **File**
-**Create** **Directory**
-**Read** **Directory**
-**Remove** **Directory**
-**Example**
-**Methods** **Reference**
+1. **Synchronous** **vs** **Asynchronous** 
+2. **Open** **a** **File**
+3. **Syntax**
+4. **Parameters**
+5. **Get** **File** **information**
+6.  **path**
+7. **flags**
+8. **mode**
+9. **callback**
+10. **Writing** **File**
+11. **Reading** **File**
+12. **Delete** **File**
+13. **Closing** **File**
+14. **Truncate** **File**
+15. **Create** **Directory**
+16. **Read** **Directory**
+17. **Remove** **Directory**
+18. **Methods** **Reference**
 
-Node implements File I/O using simple wrappers around standard POSIX
-functions. Node File System *fs* module can be imported using following
-syntax:
 
-> var fs = require("fs")
 
-**Synchronous** **vs** **Asynchronous**
+
+## **Synchronous** **vs** **Asynchronous**
 
 Every method in fs module have synchronous as well as asynchronous form.
 Asynchronous methods takes a lastparameter as completion function
@@ -81,7 +76,7 @@ Verify the Output
 
 Following section will give good examples on major File I/O methods.
 
-**Open** **a** **File**
+## **Open** **a** **File**
 
 **Syntax**
 
@@ -90,7 +85,7 @@ mode:
 
 > fs.open(path, flags\[, mode\], callback)
 
-**Parameters**
+### **Parameters**
 
 Here is the description of the parameters used:
 
@@ -108,22 +103,6 @@ Here is the description of the parameters used:
 **Flags**
 
 Flags for read/write operations are:
-
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
 
 **Example**
 
@@ -151,7 +130,7 @@ Verify the Output
 >
 > File opened successfully!
 
-**Get** **File** **information**
+## **Get** **File** **information**
 
 **Syntax**
 
@@ -159,7 +138,7 @@ Following is the syntax of the method to getthe information abouta file:
 
 > fs.stat(path, callback)
 
-**Parameters**
+## **Parameters**
 
 Here is the description of the parameters used:
 
@@ -174,18 +153,7 @@ example, there are number of useful methods available in
 **fs.Stats**class which can be used to check file type. These methods
 are given in the following table.
 
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-
-**Example**
+## **Example**
 
 Letus create a js file named **main.js**having the following code:
 
@@ -228,7 +196,7 @@ Verify the Output
 >
 > isDirectory ? false
 
-**Writing** **File**
+## **Writing** **File**
 
 **Syntax**
 
@@ -292,7 +260,7 @@ Verify the Output
 >
 > Let's read newly written data Asynchronous read: Simply Easy Learning!
 
-**Reading** **File**
+## **Reading** **File**
 
 **Syntax**
 
@@ -370,7 +338,7 @@ Verify the Output
 > Tutorials Point is giving self learning content to teach the world in
 > simple and easy way!!!!!
 
-**Closing** **File**
+## **Closing** **File**
 
 **Syntax**
 
@@ -437,7 +405,7 @@ Verify the Output
 >
 > File closed successfully.
 
-**Truncate** **File**
+## **Truncate** **File**
 
 **Syntax**
 
@@ -603,7 +571,7 @@ Verify the Output
 
 > Going to create directory /tmp/test Directory created successfully!
 
-**Read** **Directory**
+## **Read** **Directory**
 
 **Syntax**
 
@@ -650,7 +618,7 @@ Verify the Output
 >
 > test.txt
 
-**Remove** **Directory**
+## **Remove** **Directory**
 
 **Syntax**
 
@@ -703,101 +671,4 @@ Verify the Output
 
 > Going to read directory /tmp ccmzx99o.out
 >
-> ccyCSbkF.out employee.ser hsperfdata_apache test.txt
-
-**Methods** **Reference**
-
-Following is a reference of File System module available in Node.js. For
-a further detail you can refer to official documentation.
-
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-
-||
-||
-||
-||
-||
-||
-||
-||
-
-> Processing math: 100%
+> ccyCSbkF.out employee.ser hsperfdata_apache 
