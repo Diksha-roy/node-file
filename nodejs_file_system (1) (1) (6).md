@@ -57,8 +57,11 @@ In summary, Node.js is a powerful and versatile technology that offers many bene
 ## node js instalion
 
 sudo apt install curl
+
 curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+
 sudo apt-get install -y node js
+
 node --version
 
 
