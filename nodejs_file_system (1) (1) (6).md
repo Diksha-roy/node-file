@@ -2,26 +2,64 @@
 
 ## **Table of Content**
 
-1. **Synchronous** **vs** **Asynchronous** 
-2. **Open** **a** **File**
-3. **Syntax**
-4. **Parameters**
-5. **Get** **File** **information**
-6.  **path**
-7. **flags**
-8. **mode**
-9. **callback**
-10. **Writing** **File**
-11. **Reading** **File**
-12. **Delete** **File**
-13. **Closing** **File**
-14. **Truncate** **File**
-15. **Create** **Directory**
-16. **Read** **Directory**
-17. **Remove** **Directory**
-18. **Methods** **Reference**
+1. ** what is node js**
+2. ** why do you use node js **
+3. ** install node js** 
+4. **Synchronous** **vs** **Asynchronous** 
+5. **Open** **a** **File**
+6. **Syntax**
+7. **Parameters**
+8. **Get** **File** **information**
+9.  **path**
+10. **flags**
+11. **mode**
+12. **callback**
+13. **Writing** **File**
+14. **Reading** **File**
+15. **Delete** **File**
+16. **Closing** **File**
+17. **Truncate** **File**
+18. **Create** **Directory**
+19. **Read** **Directory**
+20. **Remove** **Directory**
+21. **Methods** **Reference**
 
+## Wnat is NodeJs ?
 
+_Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts._
+
+## why do you use node js
+
+Node.js is a popular JavaScript runtime built on Chrome’s V8 JavaScript engine that allows developers to create scalable and high-performance server-side applications. Here are some reasons why we use Node.js:
+
+1. Fast and Scalable: Node.js is designed to handle high-traffic and high-concurrency applications, making it an excellent choice for real-time web applications, such as chatbots, gaming, and live updates.
+
+2. Event-Driven, Non-Blocking I/O: Node.js uses an event-driven, non-blocking I/O model, which allows developers to write asynchronous code that can handle multiple requests simultaneously, improving performance and responsiveness.
+
+3. Cross-Platform: Node.js is a cross-platform runtime, meaning it can run on multiple operating systems, including Windows, macOS, and Linux.
+
+4. Large Ecosystem: Node.js has a massive ecosystem of packages and modules available through npm (Node Package Manager), making it easy to find and integrate libraries and tools for various tasks.
+
+5. JavaScript Everywhere: Node.js allows developers to use JavaScript on both the client-side (browser) and server-side, making it a consistent and efficient choice for full-stack development.
+
+6. Real-Time Capabilities: Node.js is well-suited for real-time applications that require immediate updates, such as live updates, live streaming, and real-time analytics.
+
+7. Easy to Learn: Node.js is built on JavaScript, which is a widely known and popular programming language, making it relatively easy for developers to learn and adapt.
+
+8. High Performance: Node.js is designed to handle high-performance applications, making it an excellent choice for applications that require fast response times and high throughput.
+
+9. Cost-Effective: Node.js is an open-source technology, which means it is free to use and distribute, reducing costs and making it an attractive choice for startups and enterprises alike.
+
+10. Wide Adoption: Node.js is widely adopted by many popular companies, including LinkedIn, Netflix, Uber, and Walmart, making it a reliable and well-established technology.
+
+In summary, Node.js is a powerful and versatile technology that offers many benefits, including fast and scalable performance, cross-platform compatibility, a large ecosystem, and ease of use, making it an excellent choice for a wide range of applications.
+
+## node js instalion
+
+sudo apt install curl
+curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y node js
+node --version
 
 
 ## **Synchronous** **vs** **Asynchronous**
