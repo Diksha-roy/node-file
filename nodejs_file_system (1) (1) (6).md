@@ -4,25 +4,31 @@
 
 1. **what is node js**
 2. **why do you use node js**
-3. **install node js** 
-4. **Synchronous** **vs** **Asynchronous** 
-5. **Open** **a** **File**
-6. **Syntax**
-7. **Parameters**
-8. **Get** **File** **information**
-9.  **path**
-10. **flags**
-11. **mode**
-12. **callback**
-13. **Writing** **File**
-14. **Reading** **File**
-15. **Delete** **File**
-16. **Closing** **File**
-17. **Truncate** **File**
-18. **Create** **Directory**
-19. **Read** **Directory**
-20. **Remove** **Directory**
-21. **Methods** **Reference**
+3. **install node js**
+4. **Hello World Example**
+5.**Core Modules**
+6. **HTTP Module**
+7. **File System Module**
+8. **(NPM)Node Package Manager**
+9. **Synchronous** **vs** **Asynchronous** 
+10. **Open** **a** **File**
+11. **Syntax**
+12. **Parameters**
+13. **Get** **File** **information**
+14.  **path**
+15. **flags**
+16. **mode**
+17. **callback**
+18. **Writing** **File**
+19. **Reading** **File**
+20. **Delete** **File**
+21. **Closing** **File**
+22. **Truncate** **File**
+23. **Create** **Directory**
+24. **Read** **Directory**
+25. **Remove** **Directory**
+26. **Methods** **Reference**
+27  **Conclusion**
 
 ## Wnat is NodeJs ?
 
@@ -63,6 +69,125 @@ curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y node js
 
 node --version
+
+To install Node.js, follow these steps:
+
+ ## Windows/MacOS ##
+ 
+1. Visit the [official Node.js website](https://nodejs.org/).
+2. Download the LTS (Long Term Support) version.
+3. Run the installer and follow the prompts.
+
+## Linux ##
+Open your terminal and run the following commands:
+```bash
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+```
+
+You can verify the installation by running:
+
+
+node -v
+npm -v
+
+## **Hello World Example** 
+
+Let's create a simple "Hello World" HTTP server using Node.js.
+
+Create a new file named app.js.
+Add the following code:
+javascript
+Copy code
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello, World!\n');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+Run the server:
+bash
+Copy code
+node app.js
+Open your web browser and navigate to http://127.0.0.1:3000. You should see "Hello, World!".
+
+## **Core Modules**##
+
+Node.js includes several core modules. Here are a couple of examples:
+
+HTTP Module
+The HTTP module allows Node.js to transfer data over the Hyper Text Transfer Protocol (HTTP).
+
+Example usage:
+
+javascript
+Copy code
+const http = require('http');
+
+http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end('Hello, World!');
+}).listen(8080);
+
+console.log('Server running at http://127.0.0.1:8080/');
+
+## **File System Module** ##
+
+The File System (fs) module allows you to work with the file system on your computer.
+
+Example usage:
+
+javascript
+Copy code
+const fs = require('fs');
+
+// Read file
+fs.readFile('example.txt', 'utf8', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+
+// Write file
+fs.writeFile('example.txt', 'Hello Node.js', (err) => {
+  if (err) throw err;
+  console.log('File has been saved!');
+});
+
+### **NPM (Node Package Manager)** ###
+
+NPM is the default package manager for Node.js. It allows you to install and manage third-party packages.
+
+Installing a Package
+To install a package, use the npm install command:
+
+bash
+Copy code
+npm install express
+Using a Package
+Once installed, you can use the package in your Node.js application:
+
+javascript
+Copy code
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
 
 
 ## **Synchronous** **vs** **Asynchronous**
@@ -712,4 +837,13 @@ Verify the Output
 
 > Going to read directory /tmp ccmzx99o.out
 >
-> ccyCSbkF.out employee.ser hsperfdata_apache 
+> ccyCSbkF.out employee.ser hsperfdata_apache
+> 
+## **Conclusion**##
+
+Node.js is a powerful platform for building server-side applications using JavaScript. With its non-blocking I/O and event-driven architecture, it is ideal for building scalable and efficient applications.
+
+For more information, visit the official Node.js documentation.
+
+ AD the above making necessary changes
+ 
