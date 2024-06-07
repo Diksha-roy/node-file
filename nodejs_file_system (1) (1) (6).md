@@ -6,7 +6,7 @@
 2. **why do you use node js**
 3. **install node js**
 4. **Hello World Example**
-5.**Core Modules**
+5. **Core Modules**
 6. **HTTP Module**
 7. **File System Module**
 8. **(NPM)Node Package Manager**
