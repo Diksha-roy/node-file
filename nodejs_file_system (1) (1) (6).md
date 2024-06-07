@@ -60,7 +60,7 @@ Node.js is a popular JavaScript runtime built on Chrome’s V8 JavaScript engine
 
 In summary, Node.js is a powerful and versatile technology that offers many benefits, including fast and scalable performance, cross-platform compatibility, a large ecosystem, and ease of use, making it an excellent choice for a wide range of applications.
 
-## node js instalion
+## node js installation ##
 
 sudo apt install curl
 
