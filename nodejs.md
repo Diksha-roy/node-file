@@ -202,9 +202,6 @@ former never block the program execution where as the second one does.
 
 Create a textfile named **input.txt** having following content
 
-> Tutorials Point is giving self learning content to teach the world in
-> simple and easy way!!!!!
-
 Letus create a js file named **main.js**having the following code.
 
 > var fs = require("fs");
@@ -232,13 +229,10 @@ node main.js
 
 Verify the Output
 
-> Synchronous read: Tutorials Point is giving self learning content to
-> teach the world in simple and easy way!!!!!
->
+
+
 > Program Ended
 >
-> Asynchronous read: Tutorials Point is giving self learning content to
-> teach the world in simple and easy way!!!!!
 
 Following section will give good examples on major File I/O methods.
 
@@ -354,9 +348,7 @@ Verify the Output
 >
 > blksize: 4096, ino: 4318127, size: 97, blocks: 8,
 >
-> atime: Sun Mar 22 2015 13:40:00 GMT-0500 (CDT), mtime: Sun Mar 22 2015
-> 13:40:57 GMT-0500 (CDT), ctime: Sun Mar 22 2015 13:40:57 GMT-0500
-> (CDT) }
+> 
 >
 > Got file info successfully! isFile ? true
 >
