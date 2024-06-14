@@ -835,7 +835,5 @@ Verify the Output
 
 Node.js is a powerful platform for building server-side applications using JavaScript. With its non-blocking I/O and event-driven architecture, it is ideal for building scalable and efficient applications.
 
-For more information, visit the official Node.js documentation.
 
- AD the above making necessary changes
  
