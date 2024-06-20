@@ -1,3 +1,4 @@
+
 # NodeJs
 
 ## **Table of Content**
@@ -98,29 +99,29 @@ Let's create a simple "Hello World" HTTP server using Node.js.
 
 Create a new file named app.js.
 Add the following code:
-javascript
-Copy code
-const http = require('http');
-
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, World!\n');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+   ```js
+   const http = require('http');
+   
+   const hostname = '127.0.0.1';
+   const port = 3000;
+   
+   const server = http.createServer((req, res) => {
+     res.statusCode = 200;
+     res.setHeader('Content-Type', 'text/plain');
+     res.end('Hello, World!\n');
+   });
+   
+   server.listen(port, hostname, () => {
+     console.log(`Server running at http://${hostname}:${port}/`);
+   });
+   
+   ```
 Run the server:
-bash
-Copy code
+
 node app.js
 Open your web browser and navigate to http://127.0.0.1:3000. You should see "Hello, World!".
 
-## **Core Modules**##
+## **Core Modules**
 
 Node.js includes several core modules. Here are a couple of examples:
 
@@ -129,14 +130,14 @@ The HTTP module allows Node.js to transfer data over the Hyper Text Transfer Pro
 
 Example usage:
 
-javascript
-Copy code
-const http = require('http');
-
-http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end('Hello, World!');
-}).listen(8080);
+  ```js
+  const http = require('http');
+  
+  http.createServer((req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end('Hello, World!');
+  }).listen(8080);
+  ```
 
 console.log('Server running at http://127.0.0.1:8080/');
 
@@ -146,22 +147,21 @@ The File System (fs) module allows you to work with the file system on your comp
 
 Example usage:
 
-javascript
-Copy code
-const fs = require('fs');
-
-// Read file
-fs.readFile('example.txt', 'utf8', (err, data) => {
-  if (err) throw err;
-  console.log(data);
-});
-
-// Write file
-fs.writeFile('example.txt', 'Hello Node.js', (err) => {
-  if (err) throw err;
-  console.log('File has been saved!');
-});
-
+ ```js
+ const fs = require('fs');
+ 
+ // Read file
+ fs.readFile('example.txt', 'utf8', (err, data) => {
+   if (err) throw err;
+   console.log(data);
+ });
+ 
+ // Write file
+ fs.writeFile('example.txt', 'Hello Node.js', (err) => {
+   if (err) throw err;
+   console.log('File has been saved!');
+ });
+ ```
 ### **NPM (Node Package Manager)** ###
 
 NPM is the default package manager for Node.js. It allows you to install and manage third-party packages.
@@ -169,26 +169,23 @@ NPM is the default package manager for Node.js. It allows you to install and man
 Installing a Package
 To install a package, use the npm install command:
 
-bash
-Copy code
 npm install express
 Using a Package
 Once installed, you can use the package in your Node.js application:
-
-javascript
-Copy code
-const express = require('express');
-const app = express();
-
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
-
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
-
-
+ ```js
+ 
+ const express = require('express');
+ const app = express();
+ 
+ app.get('/', (req, res) => {
+   res.send('Hello, World!');
+ });
+ 
+ app.listen(3000, () => {
+   console.log('Server is running on port 3000');
+ });
+ 
+ ```
 
 ## **Synchronous** **vs** **Asynchronous**
 
@@ -202,24 +199,25 @@ former never block the program execution where as the second one does.
 
 Create a textfile named **input.txt** having following content
 
-Letus create a js file named **main.js**having the following code.
-
-> var fs = require("fs");
->
-> // Asynchronous read
->
-> fs.readFile('input.txt', function (err, data) { if (err) {
->
-> return console.error(err); }
->
-> console.log("Asynchronous read: " + data.toString()); });
->
-> // Synchronous read
->
-> var data = fs.readFileSync('input.txt'); console.log("Synchronous
-> read: " + data.toString());
->
-> console.log("Program Ended");
+ Letus create a js file named **main.js**having the following code.
+ ```js
+ var fs = require("fs");
+ 
+ // Asynchronous read
+ 
+  fs.readFile('input.txt', function (err, data) { if (err) {
+ 
+  return console.error(err); }
+ 
+  console.log("Asynchronous read: " + data.toString()); });
+ 
+ // Synchronous read
+ 
+  var data = fs.readFileSync('input.txt'); console.log("Synchronous
+ read: " + data.toString());
+ 
+  console.log("Program Ended");
+ ```
 
 Now run the main.js to see the result:
 
@@ -316,26 +314,26 @@ are given in the following table.
 ## **Example**
 
 Letus create a js file named **main.js**having the following code:
+ ```js
+ var fs = require("fs");
+ 
+  console.log("Going to get file info!"); fs.stat('input.txt', function
+ (err, stats) {
+ 
+ if (err) {
+ 
+  return console.error(err); }
+ 
+  console.log(stats);
+ 
+ console.log("Got file info successfully!");
 
-> var fs = require("fs");
->
-> console.log("Going to get file info!"); fs.stat('input.txt', function
-> (err, stats) {
->
-> if (err) {
->
-> return console.error(err); }
->
-> console.log(stats);
->
-> console.log("Got file info successfully!");
->
-> // Check file type
->
-> console.log("isFile ? " + stats.isFile());
->
-> console.log("isDirectory ? " + stats.isDirectory()); });
-
+ // Check file type
+ 
+ console.log("isFile ? " + stats.isFile());
+ 
+  console.log("isDirectory ? " + stats.isDirectory()); });
+ ```
 Now run the main.js to see the result:
 
 > \$ node main.js
@@ -385,28 +383,29 @@ Here is the description of the parameters used:
 **Example**
 
 Letus create a js file named **main.js**having the following code:
-
-> var fs = require("fs");
->
-> console.log("Going to write into existing file");
-> fs.writeFile('input.txt', 'Simply Easy Learning!', function(err) {
->
-> if (err) {
->
-> return console.error(err); }
->
-> console.log("Data written successfully!");
->
-> console.log("Let's read newly written data"); fs.readFile('input.txt',
-> function (err, data) {
->
-> if (err) {
->
-> return console.error(err); }
->
-> console.log("Asynchronous read: " + data.toString()); });
->
-> });
+ ```js
+ > var fs = require("fs");
+ >
+ > console.log("Going to write into existing file");
+ > fs.writeFile('input.txt', 'Simply Easy Learning!', function(err) {
+ >
+ > if (err) {
+ >
+ > return console.error(err); }
+ >
+ > console.log("Data written successfully!");
+ >
+ > console.log("Let's read newly written data"); fs.readFile('input.txt',
+ > function (err, data) {
+ >
+ > if (err) {
+ >
+ > return console.error(err); }
+ >
+ > console.log("Asynchronous read: " + data.toString()); });
+ >
+ > });
+ ```
 
 Now run the main.js to see the result:
 
@@ -453,34 +452,35 @@ Here is the description of the parameters used:
 **Example**
 
 Letus create a js file named **main.js**having the following code:
-
-> var fs = require("fs");
->
-> var buf = new Buffer(1024);
->
-> console.log("Going to open an existing file"); fs.open('input.txt',
-> 'r+', function(err, fd) {
->
-> if (err) {
->
-> return console.error(err); }
->
-> console.log("File opened successfully!"); console.log("Going to read
-> the file");
->
-> fs.read(fd, buf, 0, buf.length, 0, function(err, bytes){ if (err){
->
-> console.log(err);
->
-> }
->
-> console.log(bytes + " bytes read");
->
-> // Print only read bytes to avoid junk. if(bytes \> 0){
->
-> console.log(buf.slice(0, bytes).toString()); }
->
-> }); });
+ ```js
+ > var fs = require("fs");
+ >
+ > var buf = new Buffer(1024);
+ >
+ > console.log("Going to open an existing file"); fs.open('input.txt',
+ > 'r+', function(err, fd) {
+ >
+ > if (err) {
+ >
+ > return console.error(err); }
+ >
+ > console.log("File opened successfully!"); console.log("Going to read
+ > the file");
+ >
+ > fs.read(fd, buf, 0, buf.length, 0, function(err, bytes){ if (err){
+ >
+ > console.log(err);
+ >
+ > }
+ >
+ > console.log(bytes + " bytes read");
+ >
+ > // Print only read bytes to avoid junk. if(bytes \> 0){
+ >
+ > console.log(buf.slice(0, bytes).toString()); }
+ >
+ > }); });
+ ```js
 
 Now run the main.js to see the result:
 
@@ -516,38 +516,39 @@ Here is the description of the parameters used:
 **Example**
 
 Letus create a js file named **main.js**having the following code:
-
-> var fs = require("fs");
->
-> var buf = new Buffer(1024);
->
-> console.log("Going to open an existing file"); fs.open('input.txt',
-> 'r+', function(err, fd) {
->
-> if (err) {
->
-> return console.error(err); }
->
-> console.log("File opened successfully!"); console.log("Going to read
-> the file");
->
-> fs.read(fd, buf, 0, buf.length, 0, function(err, bytes){ if (err){
->
-> console.log(err); }
->
-> // Print only read bytes to avoid junk. if(bytes \> 0){
->
-> console.log(buf.slice(0, bytes).toString()); }
->
-> // Close the opened file.
->
-> fs.close(fd, function(err){ if (err){
->
-> console.log(err); }
->
-> console.log("File closed successfully."); });
->
-> }); });
+ ```js
+ > var fs = require("fs");
+ >
+ > var buf = new Buffer(1024);
+ >
+ > console.log("Going to open an existing file"); fs.open('input.txt',
+ > 'r+', function(err, fd) {
+ >
+ > if (err) {
+ >
+ > return console.error(err); }
+ >
+ > console.log("File opened successfully!"); console.log("Going to read
+ > the file");
+ >
+ > fs.read(fd, buf, 0, buf.length, 0, function(err, bytes){ if (err){
+ >
+ > console.log(err); }
+ >
+ > // Print only read bytes to avoid junk. if(bytes \> 0){
+ >
+ > console.log(buf.slice(0, bytes).toString()); }
+ >
+ > // Close the opened file.
+ >
+ > fs.close(fd, function(err){ if (err){
+ >
+ > console.log(err); }
+ >
+ > console.log("File closed successfully."); });
+ >
+ > }); });
+```
 
 Now run the main.js to see the result:
 
@@ -585,52 +586,53 @@ Here is the description of the parameters used:
 
 **Example**
 
-Letus create a js file named **main.js**having the following code:
-
-> var fs = require("fs");
->
-> var buf = new Buffer(1024);
->
-> console.log("Going to open an existing file"); fs.open('input.txt',
-> 'r+', function(err, fd) {
->
-> if (err) {
->
-> return console.error(err); }
->
-> console.log("File opened successfully!"); console.log("Going to
-> truncate the file after 10 bytes");
->
-> // Truncate the opened file. fs.ftruncate(fd, 10, function(err){
->
-> if (err){ console.log(err);
->
-> }
->
-> console.log("File truncated successfully."); console.log("Going to
-> read the same file");
->
-> fs.read(fd, buf, 0, buf.length, 0, function(err, bytes){
->
-> if (err){ console.log(err);
->
-> }
->
-> // Print only read bytes to avoid junk. if(bytes \> 0){
->
-> console.log(buf.slice(0, bytes).toString()); }
->
-> // Close the opened file. fs.close(fd, function(err){
->
-> if (err){ console.log(err);
->
-> }
->
-> console.log("File closed successfully."); });
->
-> }); });
->
-> });
+ Letus create a js file named **main.js**having the following code:
+ ```js
+ > var fs = require("fs");
+ >
+ > var buf = new Buffer(1024);
+ >
+ > console.log("Going to open an existing file"); fs.open('input.txt',
+ > 'r+', function(err, fd) {
+ >
+ > if (err) {
+ >
+ > return console.error(err); }
+ >
+ > console.log("File opened successfully!"); console.log("Going to
+ > truncate the file after 10 bytes");
+ >
+ > // Truncate the opened file. fs.ftruncate(fd, 10, function(err){
+ >
+ > if (err){ console.log(err);
+ >
+ > }
+ >
+ > console.log("File truncated successfully."); console.log("Going to
+ > read the same file");
+ >
+ > fs.read(fd, buf, 0, buf.length, 0, function(err, bytes){
+ >
+ > if (err){ console.log(err);
+ >
+ > }
+ > 
+ > // Print only read bytes to avoid junk. if(bytes \> 0){
+ >
+ > console.log(buf.slice(0, bytes).toString()); }
+ >
+ > // Close the opened file. fs.close(fd, function(err){
+ >
+ > if (err){ console.log(err);
+ >
+ > }
+ >
+ > console.log("File closed successfully."); });
+ >
+ > }); });
+ >
+ > });
+ ```
 
 Now run the main.js to see the result:
 
@@ -831,7 +833,7 @@ Verify the Output
 >
 > ccyCSbkF.out employee.ser hsperfdata_apache
 > 
-## **Conclusion**##
+## **Conclusion**
 
 Node.js is a powerful platform for building server-side applications using JavaScript. With its non-blocking I/O and event-driven architecture, it is ideal for building scalable and efficient applications.
 
