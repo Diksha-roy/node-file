@@ -78,17 +78,7 @@ In summary, Node.js is a powerful and versatile technology that offers many bene
 
 ## node js installation ##
 
-sudo apt install curl
-
-curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-
-sudo apt-get install -y node js
-
-node --version
-
-To install Node.js, follow these steps:
-
- ## Windows/MacOS ##
+## Windows/MacOS ##
  
 1. Visit the [official Node.js website](https://nodejs.org/).
 2. Download the LTS (Long Term Support) version.
