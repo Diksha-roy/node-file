@@ -801,13 +801,7 @@ Verify the Output
 
   Going to delete an existing file File deleted successfully!
 
-**Create** **Directory**
 
-**Syntax**
-
-Following is the syntax of the method to create a directory:
-
-  fs.mkdir(path\[, mode\], callback)
 
 **Parameters**
 
@@ -865,10 +859,6 @@ Here is the description of the parameters used:
   the directory excluding '.' and '..'.
 
 **Example**
-
-
- 
-  
   
 ## **Conclusion**
 
