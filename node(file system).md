@@ -136,7 +136,7 @@ Type ".help" for more information.
 
 ## **Hello World Example** 
 
-Let's create a simple "Hello World" Node server using Node.js.
+Let's create a simple "Hello World" program using Node.js.
 
 Create a new file named app.js.
 Add the following code:
