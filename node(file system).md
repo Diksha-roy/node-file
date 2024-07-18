@@ -9,40 +9,42 @@
 4. **Node REPL**
 5. **Hello World Example**
 6. **Process in Node**
-7. **Export in Directories**
-8. **Installing Package**
-9. **Local v/s Global**
-10. **import module**
-11. **What is Express**
-12. **Getting Started With Express**
-13. **Handling requests**
-14. **Routing**
-15. **Installing Nodemon**
-16. **Path Parameters**
-17. **Query String**
-18. **Core Modules**
-19. **HTTP Module**
-20. **File System Module**
-21. **(NPM)Node Package Manager**
-22. **Synchronous** **vs** **Asynchronous** 
-23. **Open** **a** **File**
-24. **Syntax**
-25. **Parameters**
-26. **Get** **File** **information**
-27.  **path**
-28. **flags**
-29. **mode**
-30. **callback**
-31. **Writing** **File**
-32. **Reading** **File**
-33. **Delete** **File**
-34. **Closing** **File**
-35. **Truncate** **File**
-36. **Create** **Directory**
-37. **Read** **Directory**
-38. **Remove** **Directory**
-39. **Methods** **Reference**
-40.  **Conclusion**
+7. **Export in File**
+8. **Export in Directories**
+9. **Installing Package**
+10. **package.json**
+11. **Local v/s Global**
+12. **import module**
+13. **What is Express**
+14. **Getting Started With Express**
+15. **Handling requests**
+16. **Routing**
+17. **Installing Nodemon**
+18. **Path Parameters**
+19. **Query String**
+20. **Core Modules**
+21. **HTTP Module**
+22. **File System Module**
+23. **(NPM)Node Package Manager**
+24. **Synchronous** **vs** **Asynchronous** 
+25. **Open** **a** **File**
+26. **Syntax**
+27. **Parameters**
+28. **Get** **File** **information**
+29.  **path**
+30. **flags**
+31. **mode**
+32. **callback**
+33. **Writing** **File**
+34. **Reading** **File**
+35. **Delete** **File**
+36. **Closing** **File**
+37. **Truncate** **File**
+38. **Create** **Directory**
+39. **Read** **Directory**
+40. **Remove** **Directory**
+41. **Methods** **Reference**
+42.  **Conclusion**
 
 ## Wnat is NodeJs ?
 
@@ -132,37 +134,121 @@ Type ".help" for more information.
 > 
 
 ```
-Process-returns an array containing the command-line arguments passed when the Node.js process
+Process.argv-returns an array containing the command-line arguments passed when the Node.js process
 was launched.
+```
+tanu@diksha:~$ node
+Welcome to Node.js v20.15.0.
+Type ".help" for more information.
+> process.argv
+[ '/home/tanu/.nvm/versions/node/v20.15.0/bin/node' ]
+> 
+```
 
 
 ## **Hello World Example** 
 
-Let's create a simple "Hello World" HTTP server using Node.js.
+Let's create a simple "Hello World" Node server using Node.js.
 
 Create a new file named app.js.
 Add the following code:
    ```js
-   const http = require('http');
-   
-   const hostname = '127.0.0.1';
-   const port = 3000;
-   
-   const server = http.createServer((req, res) =  {
-     res.statusCode = 200;
-     res.setHeader('Content-Type', 'text/plain');
-     res.end('Hello, World!\n');
-   });
-   
-   server.listen(port, hostname, () => {
-     console.log(`Server running at http://${hostname}:${port}/`);
-   });
-   
+   let n = 5;
+   for(let i=0; i<n; i++);{
+   console.log("hello world");
+   }
+  
    ```
-Run the server:
-
+Run node file name:
+Example:
 node app.js
-Open your web browser and navigate to http://127.0.0.1:3000. You should see "Hello, World!".
+Open your node REPL "Hello World".
+## **Export in File**
+require() - a bulit-in function to include external modules that exist in separte file.
+
+module.exports- a special object.
+**example usage to export in file**
+file name math.js
+```js
+const sum = (a,b) => a+b;
+const mul = (a,b) => a*b;
+const g = 9.8;
+const PI = 3.14;
+module.export = 123; //to export information to another file.
+```
+file name app.js
+```js
+const somevalue = require("./math"); // same dir to require file
+console.log(somevalue);
+```
+run node file name app.js and require value math.js.
+## **Export in Directories**
+**example usage export dir**
+
+dir name- student information > student1
+          student information > student2
+ ```js
+// student1
+module.export = {
+name: "Diksha",
+Roll no: "123",
+};        
+```
+```js
+// student1
+module.export = {
+name: "Tanusha",
+Roll no: "124",
+};        
+```
+student information use another file to create speacial file index.js to require information all file.
+```js
+//index.js
+const student1 = require("./student1");
+const student1 = require("./student2");
+```
+let info = [student1,student2];
+module.export = info;
+```js
+// app.js
+const info = require("./student information")
+console.log(info);
+```
+run server app.js
+## **Installing Package**
+npm is the standrad package manager for node.js
+
+npm install <-package name->
+## **package.json**
+
+The package.json file contains descriptive and functionl metadata about a project,such
+as a name version and dependencies.
+npm init
+## **Local v/s Global**
+
+npm install -g <-package name->
+
+npm install <-package name->
+
+**import module**
+import {sum} from "./math.js"
+We can't selectively load only the pieces we need with require but import,we can 
+selectively load only the pieces we need, which can save memmory.
+loading synchronous for 'reruire' but can be asynchronous for 'import'.
+```js
+//math.js
+//
+export const sum = (a,b) => a+b;
+export const sum = (a,b) => a*b;
+export const g = 9.8;
+export const PI = 3.14;
+```
+```js
+//app.js
+import{sum, PI} from "./math.js";
+console.log(1,2);
+```
+run server but given outpout error it define package.json type module.
 
 ## **Core Modules**
 
