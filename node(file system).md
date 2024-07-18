@@ -328,7 +328,7 @@ Node. js is a powerful way to handle incoming requests and send responses to cli
 ```
 **Query String**
 req.query
-``js
+```js
 app.get("/search",(req,res) =>{
 let {q} = req.query;
 if(!Q){
@@ -336,6 +336,7 @@ res.send("No search query");
 }
 res.send (`This are the results for:${Q}`);
 });
+
 ```
 
 ## **Core Modules**
@@ -416,13 +417,8 @@ Now run the main.js to see the result:
 ```js
 node main.js
 ```
-
 Verify the Output
-
-
-
-  Program Ended
- 
+Program Ended
 
 Following section will give good examples on major File I/O methods.
 
@@ -510,7 +506,7 @@ are given in the following table.
 
 Letus create a js file named **main.js**having the following code:
  ```js
- var fs = require("fs");
+ let fs = require("fs");
  
   console.log("Going to get file info!"); fs.stat('input.txt', function
  (err, stats) {
