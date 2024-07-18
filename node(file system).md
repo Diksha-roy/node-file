@@ -106,6 +106,36 @@ You can verify the installation by running:
 node -v
 npm -v
 
+## **Node REPL** ##
+
+Node.Js REPL or Read-Evaluate-Print Loop is an interactive shell for the Node.js environment which means we can write any valid Javascript code in it.
+```
+tanu@diksha:~$ node 
+Welcome to Node.js v20.15.0.
+Type ".help" for more information.
+```
+## **Process** ##
+Process-This object provides information about, and control over,the currrnt Node.js process.
+```
+tanu@diksha:~$ node
+Welcome to Node.js v20.15.0.
+Type ".help" for more information.
+> process.version
+'v20.15.0'
+> process.release
+{
+  name: 'node',
+  lts: 'Iron',
+  sourceUrl: 'https://nodejs.org/download/release/v20.15.0/node-v20.15.0.tar.gz',
+  headersUrl: 'https://nodejs.org/download/release/v20.15.0/node-v20.15.0-headers.tar.gz'
+}
+> 
+
+```
+Process-returns an array containing the command-line arguments passed when the Node.js process
+was launched.
+
+
 ## **Hello World Example** 
 
 Let's create a simple "Hello World" HTTP server using Node.js.
