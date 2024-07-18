@@ -6,30 +6,43 @@
 1. **what is node js**
 2. **why do you use node js**
 3. **install node js**
-4. **Hello World Example**
-5. **Core Modules**
-6. **HTTP Module**
-7. **File System Module**
-8. **(NPM)Node Package Manager**
-9. **Synchronous** **vs** **Asynchronous** 
-10. **Open** **a** **File**
-11. **Syntax**
-12. **Parameters**
-13. **Get** **File** **information**
-14.  **path**
-15. **flags**
-16. **mode**
-17. **callback**
-18. **Writing** **File**
-19. **Reading** **File**
-20. **Delete** **File**
-21. **Closing** **File**
-22. **Truncate** **File**
-23. **Create** **Directory**
-24. **Read** **Directory**
-25. **Remove** **Directory**
-26. **Methods** **Reference**
-27.  **Conclusion**
+4. **Node REPL**
+5. **Hello World Example**
+6. **Process in Node**
+7. **Export in Directories**
+8. **Installing Package**
+9. **Local v/s Global**
+10. **import module**
+11. **What is Express**
+12. **Getting Started With Express**
+13. **Handling requests**
+14. **Routing**
+15. **Installing Nodemon**
+16. **Path Parameters**
+17. **Query String**
+18. **Core Modules**
+19. **HTTP Module**
+20. **File System Module**
+21. **(NPM)Node Package Manager**
+22. **Synchronous** **vs** **Asynchronous** 
+23. **Open** **a** **File**
+24. **Syntax**
+25. **Parameters**
+26. **Get** **File** **information**
+27.  **path**
+28. **flags**
+29. **mode**
+30. **callback**
+31. **Writing** **File**
+32. **Reading** **File**
+33. **Delete** **File**
+34. **Closing** **File**
+35. **Truncate** **File**
+36. **Create** **Directory**
+37. **Read** **Directory**
+38. **Remove** **Directory**
+39. **Methods** **Reference**
+40.  **Conclusion**
 
 ## Wnat is NodeJs ?
 
