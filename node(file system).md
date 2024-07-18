@@ -6,35 +6,35 @@
 1. **what is node js**
 2. **why do you use node js**
 3. **install node js**
-4. **Node REPL**
-5. **Hello World Example**
-6. **Process in Node**
-7. **Export in File**
-8. **Export in Directories**
-9. **Installing Package**
-10. **package.json**
-11. **Local v/s Global**
-12. **import module**
-13. **What is Express**
-14. **Getting Started With Express**
-15. **Handling requests**
-16. **Routing**
-17. **Installing Nodemon**
-18. **Path Parameters**
-19. **Query String**
-20. **Core Modules**
-21. **HTTP Module**
-22. **File System Module**
-23. **(NPM)Node Package Manager**
-24. **Synchronous** **vs** **Asynchronous** 
-25. **Open** **a** **File**
-26. **Syntax**
-27. **Parameters**
-28. **Get** **File** **information**
-29.  **path**
-30. **flags**
-31. **mode**
-32. **callback**
+4. **NPM (Node Package Manager)**
+5. **Node REPL**
+6. **Hello World Example**
+7. **Process in Node**
+8. **Export in File**
+9. **Export in Directories**
+10. **Installing Package**
+11. **package.json**
+12. **Local v/s Global**
+13. **import module**
+14. **What is Express**
+15. **Getting Started With Express**
+16. **Handling requests**
+17. **Routing**
+18. **Installing Nodemon**
+19. **Path Parameters**
+20. **Query String**
+21. **Core Modules**
+22. **HTTP Module**
+23. **File System Module** 
+25. **Synchronous** **vs** **Asynchronous** 
+26. **Open** **a** **File**
+27. **Syntax**
+28. **Parameters**
+29. **Get** **File** **information**
+30.  **path**
+31. **flags**
+32. **mode**
+33. **callback**
 42.  **Conclusion**
 ## Wnat is NodeJs ?
 
@@ -87,6 +87,33 @@ You can verify the installation by running:
 
 node -v
 npm -v
+### **NPM (Node Package Manager)** ###
+
+NPM is the default package manager for Node.js. It allows you to install and manage third-party packages.
+
+Installing a Package
+To install a package, use the npm install command:
+
+npm install package
+Using a Package
+Once installed, you can use the package in your Node.js application:
+ ```js
+ 
+ const express = require('package');
+ const app = express();
+  const express = require('express');
+ const app = express();
+ 
+ app.get('/', (req, res) =  {
+   res.send('Hello, World!');
+ });
+ 
+ app.listen(3000, () =  {
+   console.log('Server is running on port 3000');
+ });
+ 
+ ```
+
 
 ## **Node REPL** ##
 
@@ -179,13 +206,16 @@ name: "Tanusha",
 Roll no: "124",
 };        
 ```
-student information use another file to create speacial file index.js to require information all file.
+
+To import the information of a directory into a file, a file named index.js has to be created and the execution starts from the node server uss file and the information is exported there.
+
 ```js
 //index.js
 const student1 = require("./student1");
 const student1 = require("./student2");
 ```
 let info = [student1,student2];
+
 module.export = info;
 ```js
 // app.js
@@ -202,6 +232,7 @@ npm install <-package name->
 The package.json file contains descriptive and functionl metadata about a project,such
 as a name version and dependencies.
 npm init
+
 ## **Local v/s Global**
 
 npm install -g <-package name->
@@ -226,7 +257,86 @@ export const PI = 3.14;
 import{sum, PI} from "./math.js";
 console.log(1,2);
 ```
-run server but given outpout error it define package.json type module.
+run server but given output error it define package.json type module.
+## **What is Express**
+A Node.js web application framework that helps us to make web application 
+it is used for server side programming.
+
+**express uses in server side program**
+
+1.listen for incomming request.
+2.pass request.
+3.match responce with routes.
+4.responce send.
+
+```
+ npm install express
+```
+**Getting Started With Express**
+example usage in express
+```js
+const express = require("express");
+const app = express();
+
+let port = 8080;
+
+app.listen(port, () => {
+console.log(`app is listening on port $(port)`);
+
+});
+```
+Port - port the logical endpoint of a network connection that is used to exchange
+information between a web server and a web clint.
+##  **Handling requests**
+
+Node. js is a powerful way to handle incoming requests and send responses to clients. We can handle different HTTP methods, set response status codes and status messages, write response headers and body, and end the response process with response. end().
+**exampel usage in handling requests**
+
+  app.use
+  ```js
+  app.use((req.res) => {
+  console.log("new incoming request");
+  });
+ ```
+  **Routing**
+  it is process of selecting a path for traffic in a network or between or across multiple network.
+  ```js
+  app.get("apple",(req,res) => {
+  res.send({
+  name: "apple",
+  color: "red",
+  }):
+  });
+ ```
+ **Installing Nodemon**
+ 
+ To automatically restart server with code changes.
+ ```
+ npm insatll -g Nodemon // install globally
+ ```
+**Path Parameters**
+
+ Path parameters are elements embedded directly within the URL path of an API request that acts as a placeholder for specific  
+ values. They are utilized for targetting and identifying unique resources within the API.
+ 
+ req.params
+ ```js
+ app.get("/id/:username",(req.res) =>{
+ let { username } = req.params;
+ res.send(`This account belongs to @${username}`);
+ });
+```
+**Query String**
+req.query
+``js
+app.get("/search",(req,res) =>{
+let {q} = req.query;
+if(!Q){
+res.send("No search query");
+}
+res.send (`This are the results for:${Q}`);
+});
+```
 
 ## **Core Modules**
 
@@ -268,30 +378,6 @@ Example usage:
    if (err) throw err;
    console.log('File has been saved!');
  });
- ```
-### **NPM (Node Package Manager)** ###
-
-NPM is the default package manager for Node.js. It allows you to install and manage third-party packages.
-
-Installing a Package
-To install a package, use the npm install command:
-
-npm install express
-Using a Package
-Once installed, you can use the package in your Node.js application:
- ```js
- 
- const express = require('express');
- const app = express();
- 
- app.get('/', (req, res) =  {
-   res.send('Hello, World!');
- });
- 
- app.listen(3000, () =  {
-   console.log('Server is running on port 3000');
- });
- 
  ```
 
 ## **Synchronous** **vs** **Asynchronous**
