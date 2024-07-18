@@ -121,8 +121,6 @@ Type ".help" for more information.
   sourceUrl: 'https://nodejs.org/download/release/v20.15.0/node-v20.15.0.tar.gz',
   headersUrl: 'https://nodejs.org/download/release/v20.15.0/node-v20.15.0-headers.tar.gz'
 }
-> 
-
 ```
 Process.argv-returns an array containing the command-line arguments passed when the Node.js process
 was launched.
