@@ -938,7 +938,7 @@ Here is the description of the parameters used:
  
   **callback**- This is the callback function which gets two arguments
   *err*, *files* where files is an array of the names of the files in
-  the directory excluding '.' and '..'.
+  the directory excluding.
 
 **Example**
   
