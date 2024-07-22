@@ -163,6 +163,20 @@ Type ".help" for more information.
 
 [ '/home/tanu/.nvm/versions/node/v20.15.0/bin/node' ]
 
+```js
+console.log(process.argv) //print process.agv
+```
+run file name
+```bash
+node app.js
+```
+**ouput**
+[
+  '/home/tanu/.nvm/versions/node/v20.15.0/bin/node',
+  '/home/tanu/Desktop/backend/app.js'
+]
+We run process.argv in our code, it returns two values, one of which is the user's version information and the other is the location of the file.
+
 
 ## **Hello World Example** 
 
