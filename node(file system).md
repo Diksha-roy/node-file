@@ -3,9 +3,9 @@
 
 ## **Table of Content**
 
-1. **what is node js**
+1. **What is node js**
 2. **why do you use node js**
-3. **install node js**
+3. **Install node js**
 4. **NPM (Node Package Manager)**
 5. **Node REPL**
 6. **Hello World Example**
@@ -13,18 +13,17 @@
 8. **Export in File**
 9. **Export in Directories**
 10. **Installing Package**
-11. **package.json**
+11. **Package.Json**
 12. **Local v/s Global**
-13. **import module**
+13. **Import Module**
 14. **What is Express**
 15. **Getting Started With Express**
-16. **Handling requests**
+16. **Handling Requests**
 17. **Routing**
 18. **Installing Nodemon**
 19. **Path Parameters**
-20. **Query String**
-   
-42.  **Conclusion**
+20. **Query String**   
+21.  **Conclusion**
 ## Wnat is NodeJs ?
 
 _Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts._
