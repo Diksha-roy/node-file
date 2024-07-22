@@ -110,16 +110,20 @@ Node.Js REPL or Read-Evaluate-Print Loop is an interactive shell for the Node.js
 ```bash
 tanu@diksha:~$ node
 ```
+```
  Welcome to Node.js v20.15.0.
  Type ".help" for more information.
+```
 
 ## **Process** ##
 Process-This object provides information about, and control over,the currrnt Node.js process.
 ``` bash
 tanu@diksha:~$ node
 ```
+```
 Welcome to Node.js v20.15.0.
 Type ".help" for more information.
+```
 
 ```bash
 > process.version
@@ -128,31 +132,43 @@ Type ".help" for more information.
 ```bash
 > process.release
 ```
-
+```
 {
   name: 'node',
+
   lts: 'Iron',
+
   sourceUrl: 'https://nodejs.org/download/release/v20.15.0/node-v20.15.0.tar.gz',
+
   headersUrl: 'https://nodejs.org/download/release/v20.15.0/node-v20.15.0-headers.tar.gz'
+
 }
 ```
 
 Process.argv-returns an array containing the command-line arguments passed when the Node.js process
 was launched.
-
+```bash
 tanu@diksha:~$ node
+```
+```
 Welcome to Node.js v20.15.0.
 Type ".help" for more information.
+```
+```basg
 > process.argv
+```
+```
 [ '/home/tanu/.nvm/versions/node/v20.15.0/bin/node' ]
 > 
-
+```
 ## **Hello World Example** 
 
 Let's create a simple "Hello World" program using Node.js.
 
 Create a new file named app.js.
+
 Add the following code:
+
 
    ```js
    let n = 5;
@@ -164,7 +180,9 @@ Run node file name:
 
 Example:
 
+```bash
 node app.js
+```
 
 Open your node REPL "Hello World".
 
