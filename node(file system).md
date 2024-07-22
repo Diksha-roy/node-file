@@ -120,10 +120,11 @@ Process-This object provides information about, and control over,the currrnt Nod
 ``` bash
 tanu@diksha:~$ node
 ```
-```
+
 Welcome to Node.js v20.15.0.
+
 Type ".help" for more information.
-```
+
 
 ```bash
 > process.version
@@ -132,7 +133,7 @@ Type ".help" for more information.
 ```bash
 > process.release
 ```
-```
+
 {
   name: 'node',
 
@@ -143,24 +144,25 @@ Type ".help" for more information.
   headersUrl: 'https://nodejs.org/download/release/v20.15.0/node-v20.15.0-headers.tar.gz'
 
 }
-```
+
 
 Process.argv-returns an array containing the command-line arguments passed when the Node.js process
 was launched.
 ```bash
 tanu@diksha:~$ node
 ```
-```
+
 Welcome to Node.js v20.15.0.
+
 Type ".help" for more information.
-```
-```basg
+
+```bash
 > process.argv
 ```
-```
+
 [ '/home/tanu/.nvm/versions/node/v20.15.0/bin/node' ]
-> 
-```
+
+
 ## **Hello World Example** 
 
 Let's create a simple "Hello World" program using Node.js.
