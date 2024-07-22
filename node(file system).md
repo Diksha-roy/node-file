@@ -110,10 +110,11 @@ Node.Js REPL or Read-Evaluate-Print Loop is an interactive shell for the Node.js
 ```bash
 tanu@diksha:~$ node
 ```
-```
+
  Welcome to Node.js v20.15.0.
+ 
  Type ".help" for more information.
-```
+
 
 ## **Process** ##
 Process-This object provides information about, and control over,the currrnt Node.js process.
