@@ -173,13 +173,13 @@ Create a new file named app.js.
 Add the following code:
 
 
-   ```js
+   ```app.js
    let n = 5;
-   for(let i=0; i<n; i++);{
+   for(let i=0; i<n; i++){
    console.log("hello world");
    }
    ```
-Run node file name:
+Run node file name aap.js:
 
 Example:
 
@@ -187,7 +187,20 @@ Example:
 node app.js
 ```
 
-Open your node REPL "Hello World".
+
+**output**
+
+tanu@diksha:~/Desktop/backend$ node app.js
+
+hello world 0
+
+hello world 1
+
+hello world 2
+
+hello world 3
+
+hello world 4
 
 ## **Export in File**
 require() - a bulit-in function to include external modules that exist in separte file.
