@@ -25,11 +25,11 @@
 20. **Query String**   
 21.  **Conclusion**
 22.  **Reference Link**
-## Wnat is NodeJs ?
+## What is NodeJs.
 
 _Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts._
 
-## why do you use node js
+## why do you use node js.
 
 Node.js is a popular JavaScript runtime built on Chrome’s V8 JavaScript engine that allows developers to create scalable and high-performance server-side applications. Here are some reasons why we use Node.js:
 
@@ -107,20 +107,26 @@ Once installed, you can use the package in your Node.js application:
 ## **Node REPL** ##
 
 Node.Js REPL or Read-Evaluate-Print Loop is an interactive shell for the Node.js environment which means we can write any valid Javascript code in it.
+```bash
+tanu@diksha:~$ node
 ```
-tanu@diksha:~$ node 
 Welcome to Node.js v20.15.0.
 Type ".help" for more information.
-```
+
 ## **Process** ##
 Process-This object provides information about, and control over,the currrnt Node.js process.
-```
+``` bash
 tanu@diksha:~$ node
+```
 Welcome to Node.js v20.15.0.
 Type ".help" for more information.
+```bash
 > process.version
+```
 'v20.15.0'
+```bash
 > process.release
+```
 {
   name: 'node',
   lts: 'Iron',
