@@ -248,14 +248,55 @@ const sum = (a,b) => a+b;
 const mul = (a,b) => a*b;
 const g = 9.8;
 const PI = 3.14;
-module.export = 123; //to export information to another file.
+module.exports = 123; //to export information to another file.
 ```
 file name app.js
 ```js
 const somevalue = require("./math"); // same dir to require file
 console.log(somevalue);
 ```
+
+```bash
+tanu@diksha:~/Desktop/backend$ node app.js
+```
+**output**
+
+123
+
+**example**
+
+export value and usage funation 
+```math.js
+const sum = (a,b) => a + b;
+const mul = (a,b) => a * b;
+const g = 9.8;
+const PI = 3.14;
+
+
+let obj = {
+    sum:sum,
+    mul: mul,
+    g:g,
+    PI:PI
+}
+
+module.exports = obj; //to export information to another file.
+```
+```app.js
+
+const math = require("./math"); // same dir to require file
+
+console.log(math.sum (2,2));
+```
+
+```bash
+tanu@diksha:~/Desktop/backend$ node app.js 
+```
+**output**
+4
+
 run node file name app.js and require value math.js.
+
 ## **Export in Directories**
 
 **example usage export dir**
