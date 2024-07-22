@@ -1,5 +1,5 @@
 
-# NodeJs
+## NodeJs ##
 
 ## **Table of Content**
 
@@ -150,7 +150,6 @@ Add the following code:
    for(let i=0; i<n; i++);{
    console.log("hello world");
    }
-  
    ```
 Run node file name:
 Example:
@@ -160,7 +159,9 @@ Open your node REPL "Hello World".
 require() - a bulit-in function to include external modules that exist in separte file.
 
 module.exports- a special object.
+
 **example usage to export in file**
+
 file name math.js
 ```js
 const sum = (a,b) => a+b;
@@ -176,6 +177,7 @@ console.log(somevalue);
 ```
 run node file name app.js and require value math.js.
 ## **Export in Directories**
+
 **example usage export dir**
 
 dir name- student information > student1
