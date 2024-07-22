@@ -252,10 +252,14 @@ npm is the standrad package manager for node.js
 
 npm install <-package name->
 ## **package.json**
+`
 
 The package.json file contains descriptive and functionl metadata about a project,such
 as a name version and dependencies.
+```bash
 npm init
+```
+
 
 ## **Local v/s Global**
 
