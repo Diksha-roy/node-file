@@ -76,7 +76,7 @@ You can verify the installation by running:
 
 node -v
 npm -v
-### **NPM (Node Package Manager)** ###
+## **NPM (Node Package Manager)** ##
 
 NPM is the default package manager for Node.js. It allows you to install and manage third-party packages.
 
@@ -110,8 +110,8 @@ Node.Js REPL or Read-Evaluate-Print Loop is an interactive shell for the Node.js
 ```bash
 tanu@diksha:~$ node
 ```
-Welcome to Node.js v20.15.0.
-Type ".help" for more information.
+ Welcome to Node.js v20.15.0.
+ Type ".help" for more information.
 
 ## **Process** ##
 Process-This object provides information about, and control over,the currrnt Node.js process.
@@ -120,6 +120,7 @@ tanu@diksha:~$ node
 ```
 Welcome to Node.js v20.15.0.
 Type ".help" for more information.
+
 ```bash
 > process.version
 ```
@@ -127,6 +128,7 @@ Type ".help" for more information.
 ```bash
 > process.release
 ```
+
 {
   name: 'node',
   lts: 'Iron',
@@ -134,17 +136,16 @@ Type ".help" for more information.
   headersUrl: 'https://nodejs.org/download/release/v20.15.0/node-v20.15.0-headers.tar.gz'
 }
 ```
+
 Process.argv-returns an array containing the command-line arguments passed when the Node.js process
 was launched.
-```
+
 tanu@diksha:~$ node
 Welcome to Node.js v20.15.0.
 Type ".help" for more information.
 > process.argv
 [ '/home/tanu/.nvm/versions/node/v20.15.0/bin/node' ]
 > 
-```
-
 
 ## **Hello World Example** 
 
@@ -152,6 +153,7 @@ Let's create a simple "Hello World" program using Node.js.
 
 Create a new file named app.js.
 Add the following code:
+
    ```js
    let n = 5;
    for(let i=0; i<n; i++);{
@@ -159,9 +161,13 @@ Add the following code:
    }
    ```
 Run node file name:
+
 Example:
+
 node app.js
+
 Open your node REPL "Hello World".
+
 ## **Export in File**
 require() - a bulit-in function to include external modules that exist in separte file.
 
