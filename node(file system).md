@@ -173,8 +173,11 @@ node app.js
 **ouput**
 [
   '/home/tanu/.nvm/versions/node/v20.15.0/bin/node',
+  
   '/home/tanu/Desktop/backend/app.js'
+  
 ]
+
 We run process.argv in our code, it returns two values, one of which is the user's version information and the other is the location of the file.
 
 
