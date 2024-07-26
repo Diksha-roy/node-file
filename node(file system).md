@@ -83,9 +83,9 @@ Using a Package
 Once installed, you can use the package in your Node.js application:
  ```js
  
- const figlet = require ("package");
+ const package = require ("package");
 
-figlet("Hello World!!", function (err, data) {
+packge("Hello World!!", function (err, data) {
   if (err) {
     console.log("Something went wrong...");
     console.dir(err);
