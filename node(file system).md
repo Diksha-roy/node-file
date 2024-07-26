@@ -20,11 +20,9 @@
 15. **Getting Started With Express**
 16. **Handling Requests**
 17. **Routing**
-18. **Installing Nodemon**
-19. **Path Parameters**
-20. **Query String**   
-21.  **Conclusion**
-22.  **Reference Link**
+18. **Installing Nodemon**   
+19.  **Conclusion**
+20.  **Reference Link**
 ## What is NodeJs.
 
 _Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts._
@@ -429,30 +427,6 @@ Node. js is a powerful way to handle incoming requests and send responses to cli
  ```
  npm insatll -g Nodemon // install globally
  ```
-**Path Parameters**
-
- Path parameters are elements embedded directly within the URL path of an API request that acts as a placeholder for specific  
- values. They are utilized for targetting and identifying unique resources within the API.
- 
- req.params
- ```js
- app.get("/id/:username",(req.res) =>{
- let { username } = req.params;
- res.send(`This account belongs to @${username}`);
- });
-```
-**Query String**
-req.query
-```js
-app.get("/search",(req,res) =>{
-let {q} = req.query;
-if(!Q){
-res.send("No search query");
-}
-res.send (`This are the results for:${Q}`);
-});
-
-```  
 ## **Conclusion**
 
 Node.js is a powerful platform for building server-side applications using JavaScript. With its non-blocking I/O and event-driven architecture, it is ideal for building scalable and efficient applications.
