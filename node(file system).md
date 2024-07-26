@@ -83,16 +83,16 @@ Using a Package
 Once installed, you can use the package in your Node.js application:
  ```js
  
- const express = require('package');
- const app = express();
- 
- app.get('/', (req, res) =  {
-   res.send('Hello, World!');
- });
- 
- app.listen(3000, () =  {
-   console.log('Server is running on port 3000');
- });
+ const figlet = require ("package");
+
+figlet("Hello World!!", function (err, data) {
+  if (err) {
+    console.log("Something went wrong...");
+    console.dir(err);
+    return;
+  }
+  console.log(data);
+});
  
  ```
 
