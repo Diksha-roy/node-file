@@ -487,9 +487,13 @@ it is used for server side programming.
 **express uses in server side program**
 
 1.listen for incoming requests.
+
 2.pass request.
+
 3.match response with routes.
+
 4.response sent.
+
 ```
  npm install express
 ```
@@ -520,7 +524,7 @@ Node. js is a powerful way to handle incoming requests and send responses to cli
   });
  ```
   **Routing**
-   It is the process of selecting a path for traffic in a network or between or across multiple networks..
+   It is the process of selecting a path for traffic in a network or between or across multiple networks.
   ```js
   app.get("apple",(req,res) => {
   res.send({
